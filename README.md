@@ -89,6 +89,7 @@ erDiagram
         decimal preco "NOT NULL"
         text descricao
     }
+   ```
 
 ## 🏃 Como Instalar e Executar
 
