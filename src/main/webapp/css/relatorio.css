@@ -1,0 +1,39 @@
+/* Estilos específicos para os cartões de relatórios/dashboard */
+.stat-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--dark-green);
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: var(--light-green);
+    opacity: 0.5;
+}
+
+/* Cores específicas das bordas dos cartões para diferenciar visualmente */
+.border-left-success {
+    border-left-color: #2e8b57 !important;
+}
+
+.border-left-info {
+    border-left-color: #4682b4 !important;
+}
+
+/* Estilos para os cartões de Maior/Menor valor */
+.card-maior-valor {
+    border-top: 4px solid #b8860b;
+}
+
+.card-menor-valor {
+    border-top: 4px solid #cd5c5c;
+}

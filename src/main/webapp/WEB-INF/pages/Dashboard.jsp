@@ -44,6 +44,8 @@
                 <a href="${pageContext.request.contextPath}/usuario?acao=listar" class="btn btn-dark-green w-100 py-2">
                     Gerenciar Usuários
                 </a>
+
+
             </div>
         </div>
 
@@ -55,6 +57,16 @@
         </a>
         </a>
     </div>
+
+
+    <div class="mt-5">
+        <a href="${pageContext.request.contextPath}/relatorio" class="btn btn-dark-green mb-3 w-100">
+            <i class="fa-solid fa-chart-line me-2"></i> Ver Relatórios Financeiros
+        </a>
+        </a>
+    </div>
+
+
 
 </div>
 

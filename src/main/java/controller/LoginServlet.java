@@ -50,9 +50,8 @@ public class LoginServlet extends HttpServlet {
             // Guarda o usuário na sessão com o nome "usuarioLogado"
             sessao.setAttribute("usuarioLogado", usuarioAutenticado);
 
-            //  Redireciona para a home
-            RequestDispatcher rd = req.getRequestDispatcher("WEB-INF/pages/Home.jsp");
-            rd.forward(req, resp);
+            // Redireciona para a rota segura da Home usando o "porteiro" (HomeServlet)
+            resp.sendRedirect(req.getContextPath() + "/home");
 
         } else {
             RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
