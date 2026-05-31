@@ -70,13 +70,26 @@ Abaixo está a representação visual de como as tabelas do sistema se relaciona
 
 ![Diagrama ER](src/main/webapp/img/ER%20diagrama.png)
 
+---
+## ⚙️ Pré-requisitos do Ambiente
 
+Antes de compilar e executar o projeto, certifique-se de que a máquina possui as seguintes ferramentas instaladas e configuradas:
+
+* **Java Development Kit (JDK):** Versão 17 ou superior (usamos a API do Jakarta EE 6.1.0).
+* **Servidor de Aplicação:** WildFly (Recomendado) ou Apache Tomcat (versão 10+).
+* **Banco de Dados:** PostgreSQL (versão 12 ou superior).
+* **Gerenciador de Pacotes:** Apache Maven.
+* **IDE (Opcional):** IntelliJ IDEA, Eclipse ou VS Code.
 ---
 ## 🏃 Como Instalar e Executar
 
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/Arthur-Novak/CordialleArt.git
+2. ### 🔑 Acesso para logar
+Após iniciar o servidor, acesse a tela de login e utilize as credenciais de teste (já incluídas no banco de dados):
+- **Email:** `admin@cordialle.com.br` 
+- **Senha:** `123456` 
    
    
    
