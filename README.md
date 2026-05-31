@@ -6,12 +6,13 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 
-> Sistema web full-stack desenvolvido sob o padrão MVC para a **Cordialle Art**, um ateliê fictício de papelaria artesanal. O projeto contempla uma vitrine pública para clientes e um sistema administrativo restrito (Dashboard) para a gestão completa do catálogo e dos administradores.
+> Sistema web full-stack desenvolvido sob o padrão MVC para a **Cordialle Art**, um ateliê fictício de papelaria artesanal. O projeto contempla uma vitrine pública para clientes e um sistema administrativo restrito (Dashboard) para a gestão completa do catálogo, administradores e emissão de relatórios financeiros.
 
 ## 📌 Sumário
 - [Visão Geral e Funcionalidades](#-visão-geral-e-funcionalidades)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Configuração do Banco de Dados](#-configuração-do-banco-de-dados)
+- [Diagrama Entidade-Relacionamento](#-diagrama-entidade-relacionamento-er)
 - [Como Instalar e Executar](#-como-instalar-e-executar)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 
@@ -31,13 +32,14 @@ O projeto foi dividido em duas grandes áreas para simular um ambiente real de e
 * **Proteção de Rotas:** Telas restritas acessíveis através do `WEB-INF`, garantindo que o usuário só acesse via Controller (Servlets).
 * **Gestão de Produtos:** CRUD completo (Cadastro, Listagem, Edição e Exclusão) do catálogo da loja.
 * **Gestão de Usuários:** CRUD de administradores, incluindo controle de status (Ativo/Inativo) e bloqueio de exclusão do próprio usuário logado.
+* **📊 Relatórios e Estatísticas:** Dashboard analítico que processa os dados do banco para exibir métricas em tempo real, como: total de itens em estoque, valor total do catálogo, ticket médio de preços e destaques de maior/menor valor.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 **Front-end:**
-* **HTML5 & CSS3** (Módulos separados: `home.css`, `crud.css`, `galeria.css`, etc.)
+* **HTML5 & CSS3** (Módulos separados: `home.css`, `crud.css`, `galeria.css`, `relatorio.css`, etc.)
 * **Bootstrap 5** (Layout e Responsividade)
 * **JSP (JavaServer Pages) & JSTL 1.2** (Renderização dinâmica das views)
 
@@ -52,19 +54,49 @@ O projeto foi dividido em duas grandes áreas para simular um ambiente real de e
 
 ## 🗄️ Configuração do Banco de Dados
 
-O sistema utiliza o PostgreSQL. Para que a conexão via JDBC funcione imediatamente (sem precisar alterar o código Java), configure seu servidor local com as seguintes credenciais definidas na classe `ConectaDBPostgres`:
+O sistema utiliza o PostgreSQL. Para que a conexão via JDBC funcione imediatamente, configure seu servidor local com as seguintes credenciais definidas na classe `ConectaDBPostgres`:
 
 * **Banco de Dados:** `CordialleArt`
 * **Porta:** `5432`
 * **Usuário:** `postgres`
 * **Senha:** `1124`
 
-> 💡 **Nota para Avaliação:** Na pasta `database/` ou `sql/` na raiz do projeto, você encontrará o arquivo `CordialleArtDB.sql` (Dump do banco de dados). Restaure este arquivo no seu PostgreSQL para ter toda a estrutura de tabelas (`usuarios` e `produtos`) e os dados de teste já cadastrados.
+> 💡 **Nota para Avaliação:** Na pasta `src/main/resources/database/` do projeto, você encontrará o arquivo `CordialleArtDB.sql` contendo o dump do banco de dados. Restaure este arquivo no seu PostgreSQL para importar automaticamente toda a estrutura de tabelas e os dados de teste já cadastrados.
 
 ---
+
+## 📊 Diagrama Entidade-Relacionamento (ER)
+
+O diagrama abaixo representa a estrutura atual do banco de dados relacional do sistema:
+
+```mermaid
+erDiagram
+    usuarios {
+        int codigo PK "Chave Primária (Serial)"
+        varchar nome "NOT NULL"
+        varchar email "UNIQUE NOT NULL"
+        varchar senha "NOT NULL"
+        varchar telefone
+        date datanascimento
+        varchar estado
+        varchar cidade
+        boolean ativo "DEFAULT true"
+    }
+
+    produtos {
+        int codigo PK "Chave Primária (Serial)"
+        varchar nome "NOT NULL"
+        decimal preco "NOT NULL"
+        text descricao
+    }
 
 ## 🏃 Como Instalar e Executar
 
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/Arthur-Novak/CordialleArt.git
+   
+   
+   
+   
+   
