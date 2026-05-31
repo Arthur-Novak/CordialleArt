@@ -64,33 +64,14 @@ O sistema utiliza o PostgreSQL. Para que a conexão via JDBC funcione imediatame
 > 💡 **Nota para Avaliação:** Na pasta `src/main/resources/database/` do projeto, você encontrará o arquivo `CordialleArtDB.sql` contendo o dump do banco de dados. Restaure este arquivo no seu PostgreSQL para importar automaticamente toda a estrutura de tabelas e os dados de teste já cadastrados.
 
 ---
-
 ## 📊 Diagrama Entidade-Relacionamento (ER)
 
-O diagrama abaixo representa a estrutura atual do banco de dados relacional do sistema:
+Abaixo está a representação visual de como as tabelas do sistema se relacionam:
 
-```mermaid
-erDiagram
-    usuarios {
-        int codigo PK "Chave Primária (Serial)"
-        varchar nome "NOT NULL"
-        varchar email "UNIQUE NOT NULL"
-        varchar senha "NOT NULL"
-        varchar telefone
-        date datanascimento
-        varchar estado
-        varchar cidade
-        boolean ativo "DEFAULT true"
-    }
+![Diagrama ER](src/main/webapp/img/ER%20diagrama.png)
 
-    produtos {
-        int codigo PK "Chave Primária (Serial)"
-        varchar nome "NOT NULL"
-        decimal preco "NOT NULL"
-        text descricao
-    }
-   ```
 
+---
 ## 🏃 Como Instalar e Executar
 
 1. **Clone o repositório:**
