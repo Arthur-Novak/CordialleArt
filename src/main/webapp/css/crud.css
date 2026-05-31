@@ -1,0 +1,96 @@
+/* Variáveis da Cordialle Art */
+:root {
+    --bg-main: #f5f6f1;
+    --dark-green: #1b3826;
+    --light-green: #b2cebd;
+    --danger-red: #842029;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Outfit', sans-serif;
+    color: var(--dark-green);
+}
+
+.title-font {
+    font-family: 'Alex Brush', cursive;
+    font-size: 3rem;
+    color: var(--dark-green);
+}
+
+/* Estilo para os formulários de Cadastro e Edição */
+.form-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(27, 56, 38, 0.06);
+    padding: 40px;
+}
+
+/* Estilo para as Tabelas de Listagem */
+.table-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(27, 56, 38, 0.06);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: var(--dark-green);
+    color: white;
+    font-weight: 500;
+    border: none;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    color: var(--dark-green);
+}
+
+/* Botões Customizados */
+.btn-dark-green {
+    background-color: var(--dark-green);
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-dark-green:hover {
+    background-color: #12261a;
+    color: white;
+}
+
+.btn-outline-green {
+    border: 1px solid var(--dark-green);
+    color: var(--dark-green);
+    transition: all 0.3s;
+}
+
+.btn-outline-green:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    color: var(--dark-green);
+}
+
+/* Links de Ação na Tabela */
+.action-link {
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.link-edit { color: #0d6efd; }
+.link-delete { color: var(--danger-red); }
+
+
+/* Efeito de Hover para os cartões do Dashboard */
+.hover-card-dash {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.hover-card-dash:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(27, 56, 38, 0.1);
+    border-color: var(--light-green);
+}

@@ -1,0 +1,42 @@
+/* Estilos específicos para a vitrine de produtos */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(27, 56, 38, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(27, 56, 38, 0.1);
+}
+
+/* Um espaço reservado (placeholder) para a foto do produto */
+.product-img-placeholder {
+    background-color: var(--light-green);
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.price-tag {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+/* Ajuste fino para o campo de quantidade ao lado do botão */
+.qtd-input {
+    width: 70px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}

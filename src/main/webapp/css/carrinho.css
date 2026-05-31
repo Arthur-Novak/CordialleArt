@@ -1,0 +1,84 @@
+/* Variáveis de Cores da Loja */
+:root {
+    --bg-main: #f5f6f1;
+    --dark-green: #1b3826;
+    --light-green: #b2cebd;
+    --danger-red: #842029;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Outfit', sans-serif;
+    color: var(--dark-green);
+}
+
+.title-font {
+    font-family: 'Alex Brush', cursive;
+    font-size: 3.5rem;
+    color: var(--dark-green);
+}
+
+/* Estrutura dos Cartões */
+.cart-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(27, 56, 38, 0.04);
+    padding: 30px;
+}
+
+/* Ajustes da Tabela */
+.table align-middle th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #718096;
+    border-bottom: 2px solid #edf2f7;
+}
+
+.product-name {
+    font-weight: 600;
+    color: var(--dark-green);
+    font-size: 1.1rem;
+}
+
+.product-meta {
+    font-size: 0.85rem;
+    color: #a0aec0;
+}
+
+/* Botões e Inputs */
+.btn-dark-green {
+    background-color: var(--dark-green);
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+}
+
+.btn-dark-green:hover {
+    background-color: #12261a;
+    color: white;
+}
+
+.btn-outline-green {
+    border: 1px solid var(--dark-green);
+    color: var(--dark-green);
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.btn-outline-green:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    color: var(--dark-green);
+}
+
+.quantity-badge {
+    background-color: #edf2f7;
+    color: var(--dark-green);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: inline-block;
+}

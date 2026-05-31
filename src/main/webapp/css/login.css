@@ -1,0 +1,78 @@
+/* variáveis de cor da Identidade Visual */
+:root {
+    --bg-main: #f5f6f1;
+    --dark-green: #1b3826;
+    --light-green: #b2cebd;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Outfit', sans-serif;
+    color: var(--dark-green);
+}
+
+.script-font {
+    font-family: 'Alex Brush', cursive;
+    font-size: 3.5rem;
+    color: var(--dark-green);
+}
+
+/* estilo do Card Minimalista */
+.login-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(27, 56, 38, 0.06);
+    padding: 50px 40px;
+    max-width: 420px;
+    width: 100%;
+}
+
+/* estilo dos Inputs */
+.form-control {
+    background-color: var(--bg-main);
+    border: 1px solid #d1d5cb;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    border-color: var(--dark-green);
+    box-shadow: 0 0 0 0.2rem rgba(178, 206, 189, 0.5); /* Sombra verde clara */
+    background-color: #ffffff;
+}
+
+/* Botão Customizado */
+.btn-dark-green {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 12px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.btn-dark-green:hover {
+    background-color: #12261a;
+    color: white;
+}
+
+/* links customizados */
+.custom-link {
+    color: var(--dark-green);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.custom-link:hover {
+    color: var(--light-green);
+}
+
+/* alerta de erro customizado */
+.alert-custom {
+    background-color: #f8d7da;
+    color: #842029;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
