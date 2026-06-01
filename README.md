@@ -88,7 +88,7 @@ Antes de compilar e executar o projeto, certifique-se de que a máquina possui a
    git clone https://github.com/Arthur-Novak/CordialleArt.git
 2. ### 🔑 Acesso para logar
 Após iniciar o servidor, acesse a tela de login e utilize as credenciais de teste (já incluídas no banco de dados):
-- **Email:** `admin@cordialle.com.br` 
+- **Email:** `admin@cordialle.com` 
 - **Senha:** `123456` 
    
    
